@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment Form</title>
+    <style>
+     body {
+        font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(120deg, #377da0, #dbeafe);
+            margin: 0;
+        padding: 0;
+     }
+     .container {
+        display: flex;
+            justify-content: center;
+            align-items: center;
+         padding: 20px;
+     }
+     .form-box {
+        background-color: white;
+            padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            width: 100%;
+        max-width: 500px;
+     }
+     h1 {
+        text-align: center;
+            color: #712371;
+        margin-bottom: 10px;
+     }
+     h2 {
+        color: #377da0;
+            margin-top: 20px;
+             border-bottom: 2px solid#add;
+        padding-bottom: 5px;
+     }
+     label {
+        font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        color: #333;
+     }
+     input,textarea,select {
+        width: 100%;
+            padding: 10px;
+                margin-top: 5px;
+                    margin-bottom: 15px;
+                    border-radius: 8px;
+                border: 1px solid #ccc;
+            outline: none;
+        font-size: 14px;
+     }
+
+     input:focus, textarea:focus, select:focus {
+           border-color: #377da0;
+         box-shadow: 0 0 5px rgba(55, 125, 160, 0.5);
+     }
+     fieldset {
+        border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+        margin-bottom: 15px;
+     }
+
+     legend {
+        font-weight: bold;
+            color: #377da0;
+     }
+     .gender-group {
+        display: flex;
+            gap: 20px;
+        align-items: center;
+     }
+
+     .gender-group label {
+        font-weight: normal;
+     }
+
+     button {
+        width: 100%;
+            background-color: #9e4c72;
+                color: white;
+                    padding: 12px;
+                        border: none;
+                        border-radius: 8px;
+                    font-size: 16px;
+                cursor: pointer;
+            transition: 0.3s;
+     }
+
+     button:hover {
+        background:#ab627f;
+            transform: scale(1.05);
+     }
+
+     .error {
+        color: red;
+            font-size: 13px;
+     }
+ 
+     @media(max-width: 500px){
+        form {
+            margin: 20px;
+        padding: 15px;
+        }
+     }
+        </style>
+    </head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1>Payment Form </h1> 
+                <form>
+                    <p>Required Fileds are followed by *</p>
+                        <h2>Contact Information</h2>
+                            <label for="name">First Name: *</label>
+                            <input type="text" name="name" id="name" required>
+                        <fieldset>
+                    <legend>Gender *</legend>
+                <div class="gender-group">
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female" required> Female</label>
+    </div>
+        </fieldset>
+            <label for="address">Address:</label><textarea name="address" id="address" rows="4"></textarea>
+                <label for="email">Email: *</label><input  type="email" name="email" id="email" required>
+                    <label for="pincode">Pincode: *</label><input  type="number" name="pincode" id="pincode" required> 
+                        <h2>Payment Information</h2>
+                            <label for="card_type">Card Type: *</label>
+                            <select name="card_type" id="card_type" required>
+                        <option value="">--Select a Card Type--</option>
+                    <option value="visa">Visa</option>
+                <option value="rupay">Rupay</option>
+            <option value="mastercard">MasterCard</option>
+        </select>
+    <label for="card_number">Card Number *</label>
+        <input type="number" name="card_number" id="card_number" required>
+             <label for="exp_date">Expiration Date: *</label>
+                   <input type="date" name="exp_date" id="exp_date" required>
+                         <label for="cvv">CVV *</label>
+                              <input type="password" name="cvv" id="cvv" required>
+                                  <button type="submit" class="btn">Pay Now</button>
+                                  </form>
+                                </div>
+                            </div>
+                        </body>
+                    </html>
