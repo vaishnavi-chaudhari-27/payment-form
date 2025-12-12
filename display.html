@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submitted Details</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'segoe UI',Arial, sans-serif;
+            background: linear-gradient(135deg,#a3d5fc,#ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            width: 380px;
+            background: #ffffffcc;
+            padding: 25px;
+            border-radius: 18px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .thankyou {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #1d3557;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 18px;
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        span {
+            color: #1d3557;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            background: #2c3e50;
+            color:white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #1a252f;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+
+        <div class="thankyou"> ✓ Thank You</div>
+        <h2>Your Submitted Information</h2>
+
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Gender:</strong> <span id="gender"></span></p>
+        <p><strong>Address:</strong> <span id="address"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Pincode</strong> <span id="pincode"></span></p>
+        <p><strong>Card Type</strong> <span id="card_type"></span></p>
+        <p><strong>Card Number</strong> <span id="card_number"></span></p>
+
+        <a class="btn" href="payment_form.html">Back to Form</a>
+    </div>
+
+    <script>
+        const urlparams = new
+        URLSearchParams(window.location.search);
+
+        document.getElementById("name").textContent = urlparams.get("name");
+
+        document.getElementById("gender").textContent = urlparams.get("gender");
+
+        document.getElementById("address").textContent = urlparams.get("address");
+
+        document.getElementById("email").textContent = urlparams.get("email");
+
+        document.getElementById("pincode").textContent = urlparams.get("pincode");
+
+        document.getElementById("card_type").textContent = urlparams.get("card_type");
+
+        document.getElementById("card_number").textContent = urlparams.get("card_number");
+    </script>
+</body>
+</html>
