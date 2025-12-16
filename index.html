@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-    <html lang="en">n 
+    <html lang="en">
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Demo Payment Form</title>
+        <title>Payment Form</title>
     <style>
      body {
         font-family: 'Segoe UI', sans-serif;
@@ -109,13 +109,13 @@
         </style>
     </head>
 <body>
-    Updated demo payment form removed card details
+    <p style="color:red;">Demo Project - Educational Purpose Only<br>No real payment is processed</p>
     <div class="container">
         <div class="form-box">
-            <h1> Demo Payment Form </h1> 
+            <h1>Demo Payment Form </h1> 
                 <form action ="display.html" method="GET">
                     <p>Required Fileds are followed by *</p>
-                        <h2>Demo Contact Information</h2>
+                        <h2>Contact Information</h2>
                             <label for="name">Name: *</label>
                             <input type="text" name="name" id="name" required>
                         <fieldset>
@@ -129,22 +129,16 @@
                 <label for="email">Email: *</label><input  type="email" name="email" id="email" required>
                     <label for="pincode">Pincode: *</label><input  type="number" name="pincode" id="pincode" required> 
                         <h2>Demo Payment Information</h2>
-                            <label for="card_type">Demo Card Type: *</label>
+                            <label for="card_type">Demo Payment Method: *</label>
                             <select name="card_type" id="card_type" required>
                         <option value="">--Select a Card Type--</option>
-                    <option value="visa">Visa</option>
-                <option value="rupay">Rupay</option>
-            <option value="mastercard">MasterCard</option>
+                    <option value="upi">UPI</option>
+                <option value="debit_card">Debit Card</option>
+            <option value="credit_card">Credit Card</option>
         </select>
-    <label for="card_number">Demo Card Number *</label>
-        <input type="number" name="card_number" id="card_number" required>
-             <label for="exp_date">Expiration Date: *</label>
-                   <input type="date" name="exp_date" id="exp_date" required>
-                         <label for="cvv">Demo CVV *</label>
-                              <input type="password" name="cvv" id="cvv" required>
-                                  <button type="submit" class="btn">Submit</button>
-                                  </form>
-                                </div>
-                            </div>
-                        </body>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+     </div>
+            </div>
+                 </body>
                     </html>
