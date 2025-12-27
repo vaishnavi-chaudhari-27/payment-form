@@ -1,7 +1,7 @@
 # Payment Form - Demo Project
 
-This is a Payment Form created using HTML and CSS as part of my web development
-learning.
+This is a **Demo Payment Form** created using **HTML and CSS** as part of my web development
+learning journey.
 
 ## Project Description
 
@@ -13,6 +13,12 @@ learning.
 
 - HTML
 - CSS
+
+## Features
+
+- Clean and responsive UI design
+- Form layout with basic validation
+- Fully frontend, easy to understand for beginners
 
 ## Live Demo
 
